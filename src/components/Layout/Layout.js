@@ -1,9 +1,9 @@
-import Navbar from "./Header";
+import Header from "./Header";
 
 export default function Layout({ children }) {
   return (
     <section>
-      <Navbar />
+      <Header />
       {children}
     </section>
   );

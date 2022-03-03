@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
-import Link from "next/link";
-import Info from "./info";
+import Navbar from "./Navbar";
 
-export default function Navbar() {
+export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
       <div className="container">
         <button
           className="navbar-toggler"
@@ -19,9 +18,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <Info />
-        </div>
+        <Navbar language={"en"} />
       </div>
     </nav>
   );
