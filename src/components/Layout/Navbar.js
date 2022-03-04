@@ -1,21 +1,24 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
+import clsx from "clsx";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import data from "../../data/data.json";
+
 export default function Navbar(props) {
-  const language = props.language;
+  const router = useRouter();
+  const pathName = router.pathname;
+
+  // En/Zh version of navbar info
   let navbarInfo;
-  if (language === "en") {
-    navbarInfo = {
-      home: "Home",
-      resume: "Resume",
-      projects: "Projects",
-      posts: "Posts",
-    };
-  } else if (language === "zh") {
-    navbarInfo = {
-      home: "首页",
-      resume: "简历",
-      projects: "项目",
-      posts: "文章",
-    };
+  const pathsAddress = pathName.split("/");
+
+  // 1. pathNanme is '/' or '/en' or '/en/...': lands on En Version of pages
+  // 2. pathName is '/zh' or '/zh/..: lands on Zh Version of pages
+  if (pathName === "/" || pathsAddress.includes("en")) {
+    navbarInfo = data["en"];
+  } else {
+    navbarInfo = data["zh"];
   }
 
   return (
@@ -46,16 +49,23 @@ export default function Navbar(props) {
         </li>
       </ul>
       <ul className="navbar-nav">
-        <li className="nav-item active d-none d-md-block">
-          <a href="en" className="nav-link">
+        {/* <li className="nav-item active d-none d-md-block">
+          <a
+            href="en"
+            className={clsx(`${isEn ? "text-primary" : ""}`, "nav-link")}
+          >
             English
           </a>
         </li>
         <li className="nav-item">
-          <a href="zh" className="nav-link">
+          <a
+            href="zh"
+            onClick={handleChange}
+            className={clsx(`${isEn ? "" : "text-primary"}`, "nav-link")}
+          >
             中文
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

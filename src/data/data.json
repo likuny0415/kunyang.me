@@ -1,0 +1,14 @@
+{
+  "en": {
+    "home": "Home",
+    "resume": "Resume",
+    "projects": "Projects",
+    "posts": "Posts"
+  },
+  "zh": {
+    "home": "主页",
+    "resume": "简历",
+    "projects": "项目",
+    "posts": "文章"
+  }
+}

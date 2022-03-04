@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
+import { useState } from "react";
 import Navbar from "./Navbar";
 
 export default function Header() {
@@ -18,7 +19,7 @@ export default function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <Navbar language={"en"} />
+        <Navbar />
       </div>
     </nav>
   );
