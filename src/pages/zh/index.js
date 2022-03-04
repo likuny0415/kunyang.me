@@ -1,3 +1,9 @@
+import HomePage from "../../components/Homepage/home";
+
 export default function Index() {
-  return <h1>/zh home</h1>;
+  return (
+    <>
+      <HomePage lang={"zh_homepage"} />
+    </>
+  );
 }

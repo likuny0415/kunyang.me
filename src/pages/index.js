@@ -1,3 +1,9 @@
+import HomePage from "../components/Homepage/home";
+
 export default function Home() {
-  return <h1>/en home</h1>;
+  return (
+    <>
+      <HomePage lang={"en_homepage"} />
+    </>
+  );
 }
