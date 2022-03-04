@@ -1,14 +1,46 @@
 {
   "en": {
-    "home": "Home",
-    "resume": "Resume",
-    "projects": "Projects",
-    "posts": "Posts"
+    "home": {
+      "name": "Home",
+      "path": "/en"
+    },
+    "resume": {
+      "name": "Resume",
+      "path": "/en/resume"
+    },
+    "projects": {
+      "name": "Projects",
+      "path": "/en/projects"
+    },
+    "posts": {
+      "name": "Posts",
+      "path": "/en/posts"
+    },
+    "language": {
+      "curlang": "en",
+      "isEn": true
+    }
   },
   "zh": {
-    "home": "主页",
-    "resume": "简历",
-    "projects": "项目",
-    "posts": "文章"
+    "home": {
+      "name": "主页",
+      "path": "/zh"
+    },
+    "resume": {
+      "name": "简历",
+      "path": "/zh/resume"
+    },
+    "projects": {
+      "name": "项目",
+      "path": "/zh/projects"
+    },
+    "posts": {
+      "name": "文章",
+      "path": "/zh/posts"
+    },
+    "language": {
+      "curlang": "zj",
+      "isEn": false
+    }
   }
 }
