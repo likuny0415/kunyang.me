@@ -46,65 +46,41 @@
   "en_homepage": {
     "introduction": {
       "title": "Introduction",
-      "content": "Third-year honors student studying Computer Science at Northeastern University's Khoury College of Computer Sciences. Experience in Java, Javascript, and several functional programming languages,  I'm interested in learning more about software development and being able to connect it to my other skills!"
+      "content": "I'm Lunyang(Jeffrey) Li. A Third-year honors student studying Computer Science at Northeastern University's Khoury College of Computer Sciences. Experience in Java, Javascript, and several functional programming languages,  I'm interested in learning more about software development and being able to connect it to my other skills!"
     },
     "contacts": {
       "title": "Contacts",
-      "info": {
-        "mobile": {
-          "title": "Mobile",
-          "number": "+1-(857)-296-2566"
-        },
-        "email": {
-          "title": "Email",
-          "address": "li.kuny@northeastern"
-        }
-      }
+      "mobile": "Moblie",
+      "mobileNumber": "+1-(857)-296-2566",
+      "email": "Email",
+      "emailAddress": "li.kuny@northeastern"
     },
     "links": {
       "title": "Links",
-      "info": {
-        "github": {
-          "title": "Github",
-          "address": "https://github.com/likuny0415"
-        },
-        "linkedin": {
-          "title": "Linkedin",
-          "address": "https://www.linkedin.com/in/kunyang-li-006180190/"
-        }
-      }
+      "github:": "Github",
+      "githubUrl": "https://github.com/likuny0415",
+      "linkedin": "LinkedIn",
+      "linkedinUrl": "https://www.linkedin.com/in/kunyang-li-006180190/"
     }
   },
   "zh_homepage": {
     "introduction": {
       "title": "简介",
-      "content": "就读于东北大学 Khoury 计算机科学学院荣誉学生。拥有 Java、Javascript 和几种函数式编程语言的经验，有兴趣了解更多关于软件开发的知识，并能够将其与我的其他技能联系起来！!"
+      "content": "李坤阳：就读于东北大学 Khoury 计算机科学学院荣誉学生。拥有 Java、Javascript 和几种函数式编程语言的经验，有兴趣了解更多关于软件开发的知识，并能够将其与我的其他技能联系起来！!"
     },
     "contacts": {
       "title": "联系",
-      "info": {
-        "mobile": {
-          "title": "电话",
-          "number": "+86-18962453202"
-        },
-        "email": {
-          "title": "电子邮件",
-          "address": "li.kuny@northeastern"
-        }
-      }
+      "mobile": "电话",
+      "mobileNumber": "+86-18962453202",
+      "email": "电子邮件",
+      "emailAddress": "li.kuny@northeastern"
     },
     "links": {
-      "title": "连接",
-      "info": {
-        "github": {
-          "title": "Github",
-          "address": "https://github.com/likuny0415"
-        },
-        "linkedin": {
-          "title": "Linkedin",
-          "address": "https://www.linkedin.com/in/kunyang-li-006180190/"
-        }
-      }
+      "title": "链接",
+      "github:": "Github",
+      "githubUrl": "https://github.com/likuny0415",
+      "linkedin": "LinkedIn",
+      "linkedinUrl": "https://www.linkedin.com/in/kunyang-li-006180190/"
     }
   }
 }

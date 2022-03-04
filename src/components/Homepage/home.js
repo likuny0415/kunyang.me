@@ -11,7 +11,7 @@ export default function HomePage(props) {
         <div className="col-md-4 mb-4">
           <picture>
             <img
-              src="/profile_picture.jpeg"
+              src="/profile_picture.png"
               alt="profile pictures"
               sizes="(min-width: 1200px) 350px, (min-width: 992px) 290px, (min-width: 768px) 210px, calc(100vw - 30px)"
               className="img-fluid"
@@ -24,15 +24,15 @@ export default function HomePage(props) {
           <h2>{curHomePageData.contacts.title}</h2>
           <div className="row mb-3">
             <div className="col-lg-3 col-sm-4 col-5">
-              {curHomePageData.contacts.info.mobile.title}
+              {curHomePageData.contacts.mobile}
             </div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
               <a href="tel:+1-(857)-296-2566">
-                {curHomePageData.contacts.info.mobile.number}
+                {curHomePageData.contacts.mobileNumber}
               </a>
             </div>
             <div className="col-lg-3 col-sm-4 col-5">
-              {curHomePageData.contacts.info.email.title}
+              {curHomePageData.contacts.email}
             </div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
               <a href=":mailto:li.kuny@northeastern.edu">
@@ -44,11 +44,11 @@ export default function HomePage(props) {
           <div className="row mb-3">
             <div className="col-lg-3 col-sm-4 col-5">Github</div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href={curHomePageData.links.info.github.address}>Kunyang</a>
+              <a href={curHomePageData.links.githubUrl}>Kunyang</a>
             </div>
             <div className="col-lg-3 col-sm-4 col-5">LinkedIn</div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href={curHomePageData.links.info.linkedin.address}>Kunyang</a>
+              <a href={curHomePageData.links.linkedinUrl}>Kunyang</a>
             </div>
           </div>
         </div>
