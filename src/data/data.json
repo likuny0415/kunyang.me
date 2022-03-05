@@ -46,7 +46,7 @@
   "en_homepage": {
     "introduction": {
       "title": "Introduction",
-      "content": "I'm Lunyang(Jeffrey) Li. A Third-year honors student studying Computer Science at Northeastern University's Khoury College of Computer Sciences. Experience in Java, Javascript, and several functional programming languages,  I'm interested in learning more about software development and being able to connect it to my other skills!"
+      "content": "I'm Kunyang(Jeffrey) Li. A Third-year honors student studying Computer Science at Northeastern University's Khoury College of Computer Sciences. Experience in Java, Javascript, and several functional programming languages,  I'm interested in learning more about software development and being able to connect it to my other skills!"
     },
     "contacts": {
       "title": "Contacts",
@@ -65,7 +65,7 @@
   },
   "zh_homepage": {
     "introduction": {
-      "title": "简介",
+      "title": "个人简介",
       "content": "李坤阳：就读于东北大学 Khoury 计算机科学学院荣誉学生。拥有 Java、Javascript 和几种函数式编程语言的经验，有兴趣了解更多关于软件开发的知识，并能够将其与我的其他技能联系起来！!"
     },
     "contacts": {
@@ -81,6 +81,57 @@
       "githubUrl": "https://github.com/likuny0415",
       "linkedin": "LinkedIn",
       "linkedinUrl": "https://www.linkedin.com/in/kunyang-li-006180190/"
+    }
+  },
+  "en_resume": {
+    "workExperiences": {
+      "title": "Work Experiences",
+      "experiences": [
+        {
+          "timePeriod": "August 2021 - December 2021",
+          "location": "Shanghai, China",
+          "company": "1qizhuang.com",
+          "title": "Backend Developer",
+          "projects": [
+            "Improved time efficiency by automating the process of device register process.",
+            "Builded projects management system which enable admins to track of each project's progress.",
+            "Developed image capture and upload method which help visalize the project's progress by day and month."
+          ]
+        },
+        {
+          "timePeriod": "June 2021 - August 2021",
+          "location": "Beijing, China",
+          "company": "Snowball Finance",
+          "title": "Content Operation",
+          "projects": [
+            "Increase DAU by 4% through inviting experts to talk about hot topics on the market.",
+            "Operate an official account and increase the number of followers by 5k through collecting great articles write by users."
+          ]
+        }
+      ]
+    },
+    "educationBackground": {
+      "title": "Education Background",
+      "education": [
+        {
+          "timePeriod": "August 2019 - May 2024(Expected)",
+          "school": "Northeastern University",
+          "city": "Boston, Massachusetts",
+          "texts": [
+            "Honor Program with 60k scholarships, Major in Computer Science with Software Concentration.",
+            "College: Khoury College of Cumputer Science."
+          ]
+        },
+        {
+          "timePeriod": "August 2013 - May 2019",
+          "school": "Ivy Experimental High School",
+          "city": "Suzhou, China",
+          "texts": [
+            "Courses (A-LEVEL): Further Math, Advanced Math, Physics, Chemical, Economies.",
+            "Extracurricular: AP physics & AP Calculus BC, School footall team."
+          ]
+        }
+      ]
     }
   }
 }

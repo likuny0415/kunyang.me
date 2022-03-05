@@ -1,3 +1,5 @@
+import ResumeTemp from "../../components/Homepage/resume";
+
 export default function Resume() {
-  return <h1>Resume en</h1>;
+  return <ResumeTemp version={"en_resume"} />;
 }
