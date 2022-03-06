@@ -34,10 +34,6 @@ export default function Navbar(props) {
     isZh = true;
   }
 
-  // className={clsx(`${isEng ? "active d-none d-md-block" : ""}`,
-  //           "nav-item"
-  //         )}
-
   return (
     <div
       className="collapse navbar-collapse justify-content-between"

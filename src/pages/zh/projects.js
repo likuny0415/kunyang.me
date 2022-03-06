@@ -1,3 +1,10 @@
+import Titlt from "../../components/Homepage/title";
+
 export default function Projects() {
-  return <h1>Projects zh</h1>;
+  return (
+    <>
+      <Titlt landing={"zh_projects"} />
+      <h1>Projects zh</h1>
+    </>
+  );
 }

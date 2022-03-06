@@ -1,3 +1,9 @@
+import Titlt from "../../components/Homepage/title";
+
 export default function Projects() {
-  return <div></div>;
+  return (
+    <>
+      <Titlt landing={"en_projects"} />
+    </>
+  );
 }
