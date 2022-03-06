@@ -1,7 +1,7 @@
 import data from "../../data/data.json";
 
-export default function ResumeTemp() {
-  const resumeData = data.en_resume;
+export default function ResumeTemp(props) {
+  const resumeData = data[props.version];
   const experiences = resumeData.workExperiences.experiences;
   const educationBG = resumeData.educationBackground;
   const educationEx = educationBG.education;

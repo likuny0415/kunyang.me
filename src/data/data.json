@@ -123,12 +123,60 @@
           ]
         },
         {
-          "timePeriod": "August 2013 - May 2019",
+          "timePeriod": "September 2013 - May 2019",
           "school": "Ivy Experimental High School",
           "city": "Suzhou, China",
           "texts": [
             "Courses (A-LEVEL): Further Math, Advanced Math, Physics, Chemical, Economies.",
             "Extracurricular: AP physics & AP Calculus BC, School footall team."
+          ]
+        }
+      ]
+    }
+  },
+  "zh_resume": {
+    "workExperiences": {
+      "title": "工作经历",
+      "experiences": [
+        {
+          "timePeriod": "2021年 8月 - 2021年 12月",
+          "location": "上海, 中国",
+          "company": "1qizhuang.com",
+          "title": "后台开发",
+          "projects": [
+            "通过自动化设备注册过程来提高时间效率。",
+            "建立项目管理系统，使管理员能够跟踪每个项目的进度。",
+            "开发了图像捕获和上传方法，有助于按日和月可视化项目进度。"
+          ]
+        },
+        {
+          "timePeriod": "2021年 6月 - 2021年 8月",
+          "location": "北京, 上海",
+          "company": "雪球",
+          "title": "内容运营",
+          "projects": [
+            "通过邀请专家谈论市场上的热门话题，增加4%的DAU。",
+            "运营公众号，通过收集用户写的精彩文章，增加5k关注者。"
+          ]
+        }
+      ]
+    },
+    "educationBackground": {
+      "title": "教育经历",
+      "education": [
+        {
+          "timePeriod": "2019年 8月 - 2024年 5月(预期)",
+          "school": "美国东北大学",
+          "city": "Boston, Massachusetts",
+          "texts": ["荣誉项目，6万美金奖学金", "计算机学院"]
+        },
+        {
+          "timePeriod": "2013年 9月 - May 2019",
+          "school": "常青藤实验中学",
+          "city": "苏州, 中国",
+          "texts": [
+            "课程 (A-LEVEL): Further Math, Advanced Math, Physics, Chemical, Economies.",
+            "额外课程: AP physics & AP Calculus BC, 足球校队."
           ]
         }
       ]
