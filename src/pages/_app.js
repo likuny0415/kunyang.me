@@ -12,6 +12,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/logo.jpeg" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

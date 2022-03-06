@@ -5,6 +5,7 @@ export default function Resume() {
   return (
     <>
       <Titlt landing={"zh_resume"} />
+
       <ResumeTemp version={"zh_resume"} />
     </>
   );

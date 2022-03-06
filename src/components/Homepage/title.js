@@ -8,7 +8,6 @@ export default function Titlt(props) {
     <>
       <Head>
         <title>{info}</title>
-        <link rel="icon" href="/logo.jpeg" />
       </Head>
     </>
   );

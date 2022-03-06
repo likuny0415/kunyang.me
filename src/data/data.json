@@ -181,5 +181,31 @@
         }
       ]
     }
+  },
+  "projects": {
+    "en_sourceCode": "Source Code",
+    "zh_sourceCode": "源代码",
+    "links": [
+      {
+        "name": "Thoughs Share",
+        "description_en": "A platform that allow users to freely post their thoughs or blogs",
+        "description_zh": "用户可以自由注册发布自己的想法和文章",
+        "urls": {
+          "web": "https://blog-post-website.vercel.app/",
+          "source": "https://github.com/likuny0415/blog-post-website"
+        },
+        "image": "/blog_post_website.png"
+      },
+      {
+        "name": "Kunyang.me",
+        "description_en": "My personal static website",
+        "description_zh": "我的个人静态网站",
+        "urls": {
+          "web": "https://www.kunyang.me/",
+          "source": "https://github.com/likuny0415/kunyang.me"
+        },
+        "image": "/static_site.png"
+      }
+    ]
   }
 }

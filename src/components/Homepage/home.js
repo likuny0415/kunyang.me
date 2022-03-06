@@ -1,5 +1,4 @@
 import data from "../../data/data.json";
-import Image from "next/image";
 
 export default function HomePage(props) {
   const lang = props.lang;
