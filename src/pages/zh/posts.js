@@ -1,10 +1,18 @@
+import Article from "../../components/Article/article";
 import Titlt from "../../components/Homepage/title";
+import { getAllPosts } from "../api/api";
 
-export default function Posts() {
+export default function Posts({ posts }) {
   return (
     <>
       <Titlt landing={"zh_posts"} />
-      <h1>Posts zh</h1>
+      <Article posts={posts} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts().map((post) => post.meta);
+
+  return { props: { posts } };
 }
