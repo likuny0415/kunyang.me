@@ -1,24 +1,36 @@
-import Link from "next/link";
-export default function Article({ posts }) {
+export default function Article({ posts, lang }) {
+  let title;
+  if (lang == "zh") {
+    title = "文章";
+  } else {
+    title = "Posts";
+  }
   return (
     <>
-      <ul>
+      <h2 className="text-center mt-3">{title}</h2>
+
+      <div className="card border-0 mt-3">
         {posts.map((post) => (
-          <li key={post.title}>
-            <div>
-              <Link href="google.com">123123</Link>
-            </div>
-            <p>{post.excerpt}</p>
-            <p>
-              {post.tags.map((tag) => (
-                <Link href="google.com" key={tag}>
-                  {tag}
-                </Link>
-              ))}
-            </p>
-          </li>
+          <div className="card-body " key={post.excerpt}>
+            <a
+              href={`/posts/${post.slug}`}
+              className="text-decoration-none h5 mb-2"
+            >
+              {post.title}
+            </a>
+            <p className="card-text">{post.excerpt}</p>
+            {post.tags.map((tag) => (
+              <a
+                key={tag}
+                className="text-decoration-none bg-light badge rounded-pill text-dark"
+                href={`/tags/${tag}`}
+              >
+                {tag}
+              </a>
+            ))}
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 }

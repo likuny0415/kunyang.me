@@ -14,7 +14,9 @@ export default function ResumeTemp(props) {
         {experiences.map((ex) => {
           return (
             <>
-              <div className="col-md-4">{ex.timePeriod}</div>
+              <div key={ex.timePeriod} className="col-md-4">
+                {ex.timePeriod}
+              </div>
               <div className="col-md-8">
                 <h5>{ex.company}</h5>
                 <ul>
@@ -23,7 +25,7 @@ export default function ResumeTemp(props) {
                     {ex.projects.map((project) => {
                       return (
                         <>
-                          <li>{project}</li>
+                          <li key={project}>{project}</li>
                         </>
                       );
                     })}
@@ -40,14 +42,18 @@ export default function ResumeTemp(props) {
         {educationEx.map((ed) => {
           return (
             <>
-              <div className="col-md-4">{ed.timePeriod}</div>
+              <div key={ed} className="col-md-4">
+                {ed.timePeriod}
+              </div>
               <div className="col-md-8">
                 <h5>{ed.school}</h5>
 
                 {ed.texts.map((text) => {
                   return (
                     <>
-                      <div className="mt-1">{text}</div>
+                      <div key={text} className="mt-1">
+                        {text}
+                      </div>
                     </>
                   );
                 })}

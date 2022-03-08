@@ -6,7 +6,7 @@ export default function Posts({ posts }) {
   return (
     <>
       <Titlt landing={"zh_posts"} />
-      <Article posts={posts} />
+      <Article posts={posts} lang={"zh"} />
     </>
   );
 }

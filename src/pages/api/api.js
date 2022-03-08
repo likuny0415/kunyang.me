@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 import fs from "fs";
 
-const POSTS_PATH = path.join(process.cwd(), "/src/posts");
+const POSTS_PATH = path.join(process.cwd(), "/posts");
 
 export const getSlugs = () => {
   const paths = sync(`${POSTS_PATH}/*.mdx`);
