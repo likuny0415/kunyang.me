@@ -2,9 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { getPostFromSlug, getSlugs } from "../api/api";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/atom-one-light.css";
 import YouTube from "../../components/Article/youtube";
@@ -39,11 +38,7 @@ export const getStaticProps = async ({ params }) => {
   const { content, meta } = getPostFromSlug(slug);
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      rehypePlugins: [
-        rehypeSlug,
-        [rehypeAutolinkHeadings, { behavior: "wrap" }],
-        rehypeHighlight,
-      ],
+      rehypePlugins: [rehypeSlug, rehypeHighlight],
     },
   });
 
