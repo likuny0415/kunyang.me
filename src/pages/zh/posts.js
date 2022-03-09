@@ -6,7 +6,8 @@ export default function Posts({ posts }) {
   return (
     <>
       <Titlt landing={"zh_posts"} />
-      <Article posts={posts} lang={"zh"} />
+      <h2 className="text-center mt-3">文章</h2>
+      <Article posts={posts} />
     </>
   );
 }
