@@ -1,5 +1,34 @@
 # Doc
 
+### How to include CI/CD process (husky)
+
+initialize husky and install packages
+
+```console
+npx husky-init && yarn
+```
+
+format and check errors of the code
+
+```console
+yarn add --dev lint-staged prettier
+```
+
+in husky folder, add this
+
+```shell
+yarn lint-staged
+```
+
+// in pageckage.json
+
+```js
+"lint-staged": {
+    "*.{css,html,md,mdx,js,json}": "prettier --write",
+    "*.js": "eslint --fix"
+  }
+```
+
 ### Problems I Met
 
 #### Task1: How to change from en/resume to zn/resume
