@@ -1,5 +1,13 @@
 # Doc
 
+### What features I achieved
+1. Developed the language switcher feature that allow users to read my site by preference.
+2. Designed and implemented features that embed JXS components in Markdown files and enable code highlighting.
+3. Builded my site responsive, cross-browser compatible and user-friendly by using bootstrap and nextjs.
+4. Continous integration/deployment pipeline integration, automated format code and check errors. 
+
+
+
 ### How to include CI/CD process (husky)
 
 initialize husky and install packages
@@ -20,7 +28,7 @@ in husky folder, add this
 yarn lint-staged
 ```
 
-// in pageckage.json
+in pageckage.json
 
 ```js
 "lint-staged": {
