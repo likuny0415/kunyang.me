@@ -14,14 +14,13 @@ npm install --save @nestjs/passport passport passport-google-oauth20 dotenv
 npm install -D @types/passport-google-oauth20
 ```
 
-2. Get authentication from Google
+2. Get authentication from Google <br>
    Go to Google Console and enable OAuth for web application,
-   get ClientID and ClientSecret which we save in our .env file
-   to prevent leakage.Then set url and redirect url in Google console, so we can get
-   the information we want from Google and redirect for us to manipulate
-   the data and save in database.
+   get ClientID and ClientSecret and save in our .env file
+   to prevent leakage.Then set url and redirect url in Google console, this allow us
+   to manipulate the data we get from Google and save in database.
 
-3. Deployment into Heroku
+3. Deployment into Heroku <br>
    Create a file called Procfile
 
 ```console
