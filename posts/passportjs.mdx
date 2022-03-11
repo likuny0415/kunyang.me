@@ -1,0 +1,80 @@
+---
+title: How to use OAuth 2.0
+tags:
+  - OAuth
+  - Nest.js
+date: 2022-03-11
+excerpt: The process of enable Google OAuth in the web application.
+---
+
+1. We need to install these npm packages in our project
+
+```console
+npm install --save @nestjs/passport passport passport-google-oauth20 dotenv
+npm install -D @types/passport-google-oauth20
+```
+
+2. We go to Google Console and enable OAuth for web application,
+   we get ClientID and ClientSecret which we save in our .env file
+   to prevent leakage.Then set our url and redirect url, so when we get
+   the information we want from Google, we can redirect url to our
+   callback function and save that information into our database.
+
+3. We want to put our code into Heroku.
+   We first create a file called Procfile
+
+```console
+touch Procfile
+```
+
+This file allows heroku to know where to start our application, and
+we put the command into the file
+
+```console
+web: npm run start:prod
+```
+
+Then, we need to put process.env.PORT in main.ts, because Heroku
+will allocate use a valid port
+
+```js
+await app.listen(process.env.PORT || 3000);
+```
+
+4. We want to set our GoogleStrategy
+
+```ts
+@Injectable()
+export class GoogleStrategy extends PassportStrategy(Strategy) {
+  constructor() {
+    super(
+      {
+        clientID: process.env.GOOGLE_CLIENTID,
+        clientSecret: process.env.GOOGLE_CLIENTSECRET,
+        callbackURL: "http://localhost:3000/google/redirect", // redirect url
+        scope: ["email", "profile"],
+      },
+      (profile) => {
+        console.log(profile); // gives us the profile of the user
+      }
+    );
+  }
+
+  async validate(
+    accessToken: string,
+    refreshToken: string,
+    profile: any,
+    done: VerifyCallback
+  ): Promise<any> {
+    const { name, emails, photos } = profile;
+    const user = {
+      email: emails[0].value,
+      firstName: name.givenName,
+      lastName: name.familyName,
+      picture: photos[0].value,
+      accessToken,
+    };
+    done(null, user);
+  }
+}
+```
