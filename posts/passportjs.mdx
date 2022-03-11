@@ -7,41 +7,42 @@ date: 2022-03-11
 excerpt: The process of enable Google OAuth in the web application.
 ---
 
-1. We need to install these npm packages in our project
+1. Install npm packages.
 
 ```console
 npm install --save @nestjs/passport passport passport-google-oauth20 dotenv
 npm install -D @types/passport-google-oauth20
 ```
 
-2. We go to Google Console and enable OAuth for web application,
-   we get ClientID and ClientSecret which we save in our .env file
-   to prevent leakage.Then set our url and redirect url, so when we get
-   the information we want from Google, we can redirect url to our
-   callback function and save that information into our database.
+2. Get authentication from Google
+   Go to Google Console and enable OAuth for web application,
+   get ClientID and ClientSecret which we save in our .env file
+   to prevent leakage.Then set url and redirect url in Google console, so we can get
+   the information we want from Google and redirect for us to manipulate
+   the data and save in database.
 
-3. We want to put our code into Heroku.
-   We first create a file called Procfile
+3. Deployment into Heroku
+   Create a file called Procfile
 
 ```console
 touch Procfile
 ```
 
-This file allows heroku to know where to start our application, and
-we put the command into the file
+This file allows heroku to know where to start the application, and
+put the command into the file
 
 ```console
 web: npm run start:prod
 ```
 
-Then, we need to put process.env.PORT in main.ts, because Heroku
-will allocate use a valid port
+Then, put process.env.PORT in main.ts, because Heroku
+will allocate a valid port for the application
 
 ```js
 await app.listen(process.env.PORT || 3000);
 ```
 
-4. We want to set our GoogleStrategy
+4. Set GoogleStrategy in nest.js
 
 ```ts
 @Injectable()
