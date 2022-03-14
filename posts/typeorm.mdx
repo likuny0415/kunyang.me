@@ -1,0 +1,75 @@
+---
+title: How to use TypeORM to create an entity
+tags:
+  - typeorm
+  - nestjs
+date: 2022-03-14
+excerpt: Use typeorm to connect to database and create simple useable CRUB operations
+---
+
+### 1. Connect to database
+
+The first thing we should do is to connect to database.
+
+```ts
+// import database in app.module.ts
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: process.env.MQSQL_DATABASE_HOST,
+      port: 3306,
+      username: process.env.MQSQL_DATABASE_USERNAME,
+      password: process.env.MQSQL_DATABASE_PASSWORD,
+      database: process.env.MQSQL_DATABASE_NAME,
+      entities: [],
+      synchronize: true,
+    }),
+  ],
+```
+
+### 2. Create an entity
+
+```ts
+// user.entity.ts
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+
+@Entity()
+export class User {
+  @PrimaryGeneratedColumn("uuid")
+  id: number;
+
+  @Column()
+  username: string;
+
+  @Column()
+  password: string;
+}
+```
+
+### 3. Import entity in module
+
+```ts
+// user.module.ts
+// import in current module
+//...
+@Module({
+  imports: [TypeOrmModule.forFeature([User])],
+  //...
+  //...
+})
+//..
+
+// app.module.ts
+// import in app module
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+
+      //...
+      entities: [User],
+
+      //...
+    }),
+  ],
+```
