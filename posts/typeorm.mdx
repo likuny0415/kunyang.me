@@ -2,7 +2,7 @@
 title: How to use TypeORM to create an entity
 tags:
   - typeorm
-  - nestjs
+  - nest.js
 date: 2022-03-14
 excerpt: Use typeorm to connect to database and create simple useable CRUB operations
 ---
@@ -72,4 +72,21 @@ export class User {
       //...
     }),
   ],
+```
+
+### What does a validation pipe do
+
+It ensures that the input is valid by making use of DTO(Data transfer object)
+if you want to create a user, you must input valid email and password, otherwise
+it will be blocked by **pipe**
+
+```ts
+import { IsEmail, IsString } from "@nest/typeorm";
+class CreateUserDto {
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  password: string;
+}
 ```

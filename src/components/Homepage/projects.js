@@ -1,5 +1,6 @@
 import data from "../../data/data.json";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectTemplate(props) {
   const projectsData = data.projects;
@@ -23,19 +24,20 @@ export default function ProjectTemplate(props) {
         {projectsData.links.map((link) => {
           return (
             <>
-              <div className="my-4">
+              <div className="my-4" key={link.name}>
                 <div className="d-md-flex flex-row align-items-end">
-                  <a
-                    href={link.urls.web}
-                    className="flex-grow-1 text-decoration-none"
-                  >
-                    <h2>{link.name}</h2>
-                  </a>
+                  <Link href={link.urls.web}>
+                    <a className="flex-grow-1 text-decoration-none">
+                      <h2>{link.name}</h2>
+                    </a>
+                  </Link>
                   <div className="text-muted mb-2">
                     (
-                    <a href={link.urls.source} className="text-decoration-none">
-                      {descript.sourcecode}
-                    </a>
+                    <Link href={link.urls.source}>
+                      <a className="text-decoration-none">
+                        {descript.sourcecode}
+                      </a>
+                    </Link>
                     )
                   </div>
                 </div>

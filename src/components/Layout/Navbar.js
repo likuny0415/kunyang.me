@@ -41,51 +41,55 @@ export default function Navbar(props) {
     >
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <a
-            className={clsx(
-              `${destination == "" ? "text-primary" : ""}`,
-              "nav-link"
-            )}
-            href={navbarInfo.home.path}
-          >
-            {navbarInfo.home.name}
-          </a>
+          <Link href={navbarInfo.home.path}>
+            <a
+              className={clsx(
+                `${destination == "" ? "text-primary" : ""}`,
+                "nav-link"
+              )}
+            >
+              {navbarInfo.home.name}
+            </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            className={clsx(
-              `${destination == "resume" ? "text-primary" : ""}`,
-              "nav-link"
-            )}
-            href={navbarInfo.resume.path}
-            id="resume"
-          >
-            {navbarInfo.resume.name}
-          </a>
+          <Link href={navbarInfo.resume.path}>
+            <a
+              className={clsx(
+                `${destination == "resume" ? "text-primary" : ""}`,
+                "nav-link"
+              )}
+              id="resume"
+            >
+              {navbarInfo.resume.name}
+            </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            className={clsx(
-              `${destination == "projects" ? "text-primary" : ""}`,
-              "nav-link"
-            )}
-            href={navbarInfo.projects.path}
-            id="projects"
-          >
-            {navbarInfo.projects.name}
-          </a>
+          <Link href={navbarInfo.projects.path}>
+            <a
+              className={clsx(
+                `${destination == "projects" ? "text-primary" : ""}`,
+                "nav-link"
+              )}
+              id="projects"
+            >
+              {navbarInfo.projects.name}
+            </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            className={clsx(
-              `${destination == "posts" ? "text-primary" : ""}`,
-              "nav-link"
-            )}
-            href={navbarInfo.posts.path}
-            id="posts"
-          >
-            {navbarInfo.posts.name}
-          </a>
+          <Link href={navbarInfo.posts.path}>
+            <a
+              className={clsx(
+                `${destination == "posts" ? "text-primary" : ""}`,
+                "nav-link"
+              )}
+              id="posts"
+            >
+              {navbarInfo.posts.name}
+            </a>
+          </Link>
         </li>
       </ul>
       <ul className="navbar-nav">
@@ -95,15 +99,16 @@ export default function Navbar(props) {
             "nav-item"
           )}
         >
-          <a
-            href={`/en/${destination}`}
-            className={clsx(
-              `${navbarInfo.language.isEn ? "text-primary" : ""}`,
-              "nav-link"
-            )}
-          >
-            English
-          </a>
+          <Link href={`/en/${destination}`}>
+            <a
+              className={clsx(
+                `${navbarInfo.language.isEn ? "text-primary" : ""}`,
+                "nav-link"
+              )}
+            >
+              English
+            </a>
+          </Link>
         </li>
         <li
           className={clsx(
@@ -111,15 +116,16 @@ export default function Navbar(props) {
             "nav-item"
           )}
         >
-          <a
-            href={`/zh/${destination}`}
-            className={clsx(
-              `${navbarInfo.language.isEn ? "" : "text-primary"}`,
-              "nav-link"
-            )}
-          >
-            中文
-          </a>
+          <Link href={`/zh/${destination}`}>
+            <a
+              className={clsx(
+                `${navbarInfo.language.isEn ? "" : "text-primary"}`,
+                "nav-link"
+              )}
+            >
+              中文
+            </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -1,4 +1,5 @@
 import data from "../../data/data.json";
+import Link from "next/link";
 
 export default function HomePage(props) {
   const lang = props.lang;
@@ -31,28 +32,32 @@ export default function HomePage(props) {
               {curHomePageData.contacts.mobile}
             </div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href="tel:+1-(857)-296-2566">
-                {curHomePageData.contacts.mobileNumber}
-              </a>
+              <Link href="tel:+1-(857)-296-2566">
+                <a>{curHomePageData.contacts.mobileNumber}</a>
+              </Link>
             </div>
             <div className="col-lg-3 col-sm-4 col-5">
               {curHomePageData.contacts.email}
             </div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href=":mailto:li.kuny@northeastern.edu">
-                li.kuny@northeastern.edu
-              </a>
+              <Link href="/li.kuny@northeastern.edu">
+                <a>li.kuny@northeastern.edu</a>
+              </Link>
             </div>
           </div>
           <h2>{curHomePageData.links.title}</h2>
           <div className="row mb-3">
             <div className="col-lg-3 col-sm-4 col-5">Github</div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href={curHomePageData.links.githubUrl}>Kunyang</a>
+              <Link href={curHomePageData.links.githubUrl}>
+                <a>Kunyang</a>
+              </Link>
             </div>
             <div className="col-lg-3 col-sm-4 col-5">LinkedIn</div>
             <div className="col-lg-9 col-sm-8 col-7 font-weight-bold">
-              <a href={curHomePageData.links.linkedinUrl}>Kunyang</a>
+              <Link href={curHomePageData.links.linkedinUrl}>
+                <a>Kunyang</a>
+              </Link>
             </div>
           </div>
         </div>
