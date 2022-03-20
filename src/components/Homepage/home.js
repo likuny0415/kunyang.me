@@ -11,7 +11,7 @@ export default function HomePage(props) {
       <div className="row">
         <div className="col-md-4 mb-4">
           <Image
-            src="/profile_picture.png"
+            src="/profile_picture_3x.jpg"
             height={360}
             width={400}
             layout="responsive"
