@@ -15,7 +15,9 @@ export default function HomePage(props) {
             height={360}
             width={400}
             layout="responsive"
-            alt="profile"
+            placeholder="blur"
+            blurDataURL="/profile_picture_1x.jpg"
+            alt="profile_picture"
           />
         </div>
         <div className="col-md-8">
