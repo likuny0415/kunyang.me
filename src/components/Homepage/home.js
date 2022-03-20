@@ -1,5 +1,6 @@
 import data from "../../data/data.json";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage(props) {
   const lang = props.lang;
@@ -9,19 +10,13 @@ export default function HomePage(props) {
     <div className="container mt-3">
       <div className="row">
         <div className="col-md-4 mb-4">
-          <picture>
-            <source
-              media="(max-width: 767.98px)"
-              srcSet="/profile_picture_3x.jpg 1080w, /profile_picture_2x.jpg 720w, /profile_picture_3x.jpg 360w"
-              sizes="calc(100vw - 30px)"
-            />
-            <img
-              src="/profile_picture.jpg"
-              srcSet="/profile_picture_3x.jpg 1080w, /profile_picture_2x.jpg 720w, /profile_picture_3x.jpg 360w"
-              sizes="(min-width: 1200px) 350px, (min-width: 992px) 290px, (min-width: 768px) 210px, calc(100vw - 30px)"
-              className="img-fluid"
-            />
-          </picture>
+          <Image
+            src="/profile_picture.png"
+            height={360}
+            width={400}
+            layout="responsive"
+            alt="profile"
+          />
         </div>
         <div className="col-md-8">
           <h2>{curHomePageData.introduction.title}</h2>
